@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>Data Collector</title>
+    </head>   
+<body style="background-color: lightblue;">
+
+
+<div style="text-align: center;">
+<h2>Data Collector</h2>
+<form>
+  <p><label for="fname">Enter Name of the candidate:</label>
+  <input type="text" id="UserName" name="fname" value=" " oninput="handleRadioDev(),handleRadioTest()"><br></p>
+  
+<p>Is he a developer or a tester?:
+    <input type="radio" id="dev" name="profile" value="HTML" onchange="handleSelect()" disabled onclick="showDev(),hideTest()" >
+      <label for="dev">Developer</label>
+      <input type="radio" id="tester" name="profile" value="tester" disabled onchange="handleSelect()" onclick="showTest(),hideDev()">
+      <label for="tester">Tester</label><br>
+
+<p><label for="exp">What is his education level:</label>
+    <select name="edu" id="edu" disabled  onchange="handleExp()" >
+      <option value="dip">Diploma</option>
+      <option value="grad">Graduate</option>
+      <option value="post">Post Graduate</option>
+      <option value="mast">Masters</option>
+    </select><br></p>
+
+<p><label for="exp">How much expierence does he have?:</label>
+<select name="exp" id="exp" disabled onchange="handletechDev(), handletechtest()">
+  <option value="1">1-2 Years</option>
+  <option value="2">2-5 Years</option>
+  <option value="3">5-10 Years</option>
+  <option value="4">10+ Years</option>
+</select><br></p>
+
+
+<div id="devTech" style="display: none;">
+<p><label for="tech-dev">Which technology does the developer use?:</label>
+<select name="tech-dev" id="tech-dev" disabled onchange="enableButton()">
+  <option value="UI">UI</option>
+  <option value="Angular">Angular</option>
+  <option value="UI+Angular">UI+Angular</option>
+  <option value="UI+Angular+DB">UI+Angular+DB</option>
+</select></p></div>
+
+<div id="testerTech" style="display: none;">
+<p><label for="tech-tester">Which technology does the tester use?:</label>
+<select name="tech-tester" id="tech-tester" disabled onchange="enableButton()">
+  <option value="Manual">Manual</option>
+  <option value="Automation">Automation</option>
+  <option value="Manual+Automation">Manual+Automation</option>
+  <option value="Manual+Automation+API">Manual+Automation+API</option>
+</select></p></div>
+
+<button id ="button" type="button"onclick="showName(),showAGrade(),showResult()" disabled > Submit </button>
+<button id ="refresh" type="button"onclick="location.reload();"> Refresh </button></br>
+
+<div id ="result" style="border: 2px solid;margin-top: 20px; display: none;">
+  <p style="padding-left: 5px;padding-right: 5px;">Your Candidate <span style="font-weight: bold" id="CandName"></span> is a grade <span style="font-weight: bold" id="Grade"></span> Candidate</p>
+</div>
+
+</form> 
+</div>
+
+<script src="main.js"></script> 
+</body>
+</html>
+
