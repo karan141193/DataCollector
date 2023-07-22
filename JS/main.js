@@ -1,9 +1,9 @@
 
-function handleSelect() {
+function handleComp() {
     if (this.value == '01') {
-        document.getElementById('edu').disabled = true;
+        document.getElementById('comp').disabled = true;
     } else {
-        document.getElementById('edu').disabled = false;
+        document.getElementById('comp').disabled = false;
     }
 }
  
@@ -91,18 +91,34 @@ function enableButton() {
     }
 }
 
-function handleRadioDev() {
+function handleRadioHall() {
     if (this.value == '01') {
-        document.getElementById('dev').disabled = true;
+        document.getElementById('Hall').disabled = true;
     } else {
-        document.getElementById('dev').disabled = false;
+        document.getElementById('Hall').disabled = false;
     }
 }
  
-function handleRadioTest() {
+function handleRadioBaker() {
     if (this.value == '01') {
-        document.getElementById('tester').disabled = true;
+        document.getElementById('Baker').disabled = true;
     } else {
-        document.getElementById('tester').disabled = false;
+        document.getElementById('Baker').disabled = false;
+    }
+}
+
+function handleRadioWeather() {
+    if (this.value == '01') {
+        document.getElementById('WeatherF').disabled = true;
+    } else {
+        document.getElementById('WeatherF').disabled = false;
+    }
+}
+
+function handleRadioOther() {
+    if (this.value == '01') {
+        document.getElementById('Other').disabled = true;
+    } else {
+        document.getElementById('Other').disabled = false;
     }
 }

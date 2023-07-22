@@ -1,0 +1,76 @@
+.vscomp-toggle-button{
+    border-radius: 5px;
+}
+
+#comDiv{
+    padding-top: 30px;
+    padding-bottom: 20px;
+    text-align: center;
+    border: 1px solid black;
+    width:33%;
+    float: left;
+    height: 200px;
+}
+
+#WlDiv{
+    padding-top: 30px;
+    padding-bottom: 20px;
+    text-align: center;
+    border-top: 1px solid black;
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+    width:33%;
+    float: left;
+    height: 200px;
+}
+
+#coreDiv{
+    padding-top: 30px;
+    padding-bottom: 20px;
+    text-align: center;
+    border-top: 1px solid black;
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+    width:33%;
+    float: left;
+    height: 200px;
+}
+
+#compExperise{
+    padding-left: 26px;
+    padding-top: 10px;
+}
+
+#actionButtons{
+    padding-top: 20px;
+    text-align: center;
+}
+
+#formtop{
+    padding-top: 10px;
+}
+
+#Elements{
+    padding-top: 40px;
+    padding-left: 10px;
+}
+
+#userForm{
+    border: 1px solid black;
+    padding: 25px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+#actionButtons{
+    display: inline-block;
+    width: 100%;
+    
+}
+
+#UserName{
+    height: 25px;
+    width: 200px;
+    border: none;
+    border-radius: 4px;
+}
