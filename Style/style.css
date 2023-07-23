@@ -3,13 +3,14 @@
 }
 
 #comDiv{
-    padding-top: 30px;
+    /* padding-top: 30px; */
     padding-bottom: 20px;
     text-align: center;
     border: 1px solid black;
-    width:33%;
+    width:38%;
     float: left;
-    height: 200px;
+    height: 260px;
+    overflow-y: scroll;
 }
 
 #WlDiv{
@@ -19,9 +20,9 @@
     border-top: 1px solid black;
     border-right: 1px solid black;
     border-bottom: 1px solid black;
-    width:33%;
+    width:31%;
     float: left;
-    height: 200px;
+    height: 230px;
 }
 
 #coreDiv{
@@ -31,9 +32,9 @@
     border-top: 1px solid black;
     border-right: 1px solid black;
     border-bottom: 1px solid black;
-    width:33%;
+    width:30%;
     float: left;
-    height: 200px;
+    height: 230px;
 }
 
 #compExperise{
@@ -74,3 +75,29 @@
     border: none;
     border-radius: 4px;
 }
+
+#sercom1, #sercom2, #sercom3, #sercom4, #sercom5, #sercom6,
+#sercom7, #sercom8, #sercom9, #sercom10, #sercom11,
+#sercom12, #sercom13, #sercom14, #sercom15, #sercom16, #sercom17{
+    padding-left: 10px;
+    text-align: left;
+}
+
+#serCore1, #serCore2, #serCore3, #serCore4{
+    padding-left: 10px;
+    text-align: left;
+}
+
+#serWl1, #serWl2, #serWl3, #serWl4{
+    padding-left: 10px;
+    text-align: left;
+}
+
+#sticky {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    background-color: lightblue;
+    padding-top: 30px;
+    font-size: 25px;
+  }
