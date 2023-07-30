@@ -4,12 +4,12 @@
 
 #comDiv{
     /* padding-top: 30px; */
-    padding-bottom: 20px;
+    /* padding-bottom: 20px; */
     text-align: center;
     border: 1px solid black;
     width:38%;
     float: left;
-    height: 260px;
+    height: 300px;
     overflow-y: scroll;
 }
 
@@ -18,11 +18,10 @@
     padding-bottom: 20px;
     text-align: center;
     border-top: 1px solid black;
-    border-right: 1px solid black;
     border-bottom: 1px solid black;
     width:31%;
     float: left;
-    height: 230px;
+    height: 250px;
 }
 
 #coreDiv{
@@ -31,10 +30,11 @@
     text-align: center;
     border-top: 1px solid black;
     border-right: 1px solid black;
+    border-left: 1px solid black;
     border-bottom: 1px solid black;
     width:30%;
     float: left;
-    height: 230px;
+    height: 250px;
 }
 
 #compExperise{
@@ -45,6 +45,20 @@
 #actionButtons{
     padding-top: 20px;
     text-align: center;
+}
+
+#refresh{
+    padding-right:10px ;
+    padding-left:10px ;
+    font-size: 20px;
+    border-radius: 5px;
+}
+
+#submitbutton{
+    padding-right:10px ;
+    padding-left:10px ;
+    font-size: 20px;
+    border-radius: 5px;
 }
 
 #formtop{
@@ -101,3 +115,42 @@
     padding-top: 30px;
     font-size: 25px;
   }
+
+  #stickyBottom {
+    position: -webkit-sticky;
+    position: sticky;
+    bottom: 0;
+    background-color: lightblue;
+    padding-top: 30px;
+    padding-bottom: 20px;
+    font-size: 25px;
+    text-align: center;
+  }
+  #stickyBottomWl {
+    position: -webkit-sticky;
+    position: sticky;
+    bottom: 0;
+    background-color: lightblue;
+    padding-top: 46px;
+    padding-bottom: 20px;
+    font-size: 25px;
+    text-align: center;
+  }
+  #stickyBottomCore {
+    position: -webkit-sticky;
+    position: sticky;
+    bottom: 0;
+    background-color: lightblue;
+    padding-top: 46px;
+    padding-bottom: 20px;
+    font-size: 25px;
+    text-align: center;
+  }
+
+/* #clearCore{
+    margin-right: 50px;
+}   */
+  #result{
+    width: 100%;
+    text-align: center;
+  }  
