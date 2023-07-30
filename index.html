@@ -36,17 +36,17 @@
 
 <div id="userForm">
 <form>
-  <p><label for="fname">Enter Name of the candidate:</label>
+  <p><label for="fname">Enter Name of the candidate:</label> 
   <input type="text" id="UserName" name="fname" value=" " oninput="handleRadioHall(),handleRadioBaker(),handleRadioWeather(),handleRadioOther()"><br></p>
   
 <p>Please select a Previous Employer:
-      <input type="radio" id="Hall" name="profile" value="HALLIBURTON" onchange="handleComp()" onclick="handleCompentency()" disabled>
+      <input type="radio" id="Hall" name="profile" value="HALLIBURTON" onchange="handleComp()" onclick="handleCompentency(),enableSubmit()" disabled>
       <label for="Hall">HALLIBURTON</label>
-      <input type="radio" id="Baker" name="profile" value="BAKER HUGHES" disabled onchange="handleSelect()" onclick="handleCompentency()">
+      <input type="radio" id="Baker" name="profile" value="BAKER HUGHES" disabled onchange="handleSelect()" onclick="handleCompentency(),enableSubmit()">
       <label for="Baker">BAKER HUGHES</label>
-      <input type="radio" id="WeatherF" name="profile" value="WEATHERFORD" disabled onchange="handleSelect()" onclick="handleCompentency()">
+      <input type="radio" id="WeatherF" name="profile" value="WEATHERFORD" disabled onchange="handleSelect()" onclick="handleCompentency(),enableSubmit()">
       <label for="WeatherF">WEATHERFORD</label>
-      <input type="radio" id="Other" name="profile" value="OTHERS" disabled onchange="handleSelect()" onclick="handleCompentency()">
+      <input type="radio" id="Other" name="profile" value="OTHERS" disabled onchange="handleSelect()" onclick="handleCompentency(),enableSubmit()">
       <label for="Other">OTHERS</label><br>
 
   </form> 
@@ -54,7 +54,130 @@
 </div>
 
 <div id="Elements">  
-<Div id="comDiv">
+<Div id="coreDiv">
+  <form name="core">
+  <p style="font-size: 18px;"><strong>Select Core Services</strong></p> 
+  <table style="width:100%">
+    <tr>
+      <th>Services</th>
+      <th>Expertise Level</th>
+    </tr>
+    <tr>
+      <td id="serCore1"><input type="checkbox" id="core1" name="Winch Control" value="Winch Control"disabled onclick="handlecCre1(this)" >
+        <label for="core1"> Winch Control</label><br></td>
+      <td>
+        <input type="radio" id="coreInt1" name="core1" value="Intermediate" disabled >
+         <label for="coreInt1">Intermediate</label>
+        <input type="radio" id="coreAdv1" name="core1" value="Advanced" disabled >
+         <label for="coreAdv1">Advance</label>
+        <input type="radio" id="coreExp1" name="core1" value="Expert" disabled  >
+         <label for="coreExp1">Expert</label>
+      </td>
+    </tr>
+    <tr>
+      <td id="serCore2"><input type="checkbox" id="core2" name="Units" value="Units"disabled onclick="handlecCre2(this)">
+        <label for="core2"> Units</label><br></td>
+      <td>
+        <input type="radio" id="coreInt2" name="core2" value="Intermediate" disabled >
+         <label for="coreInt2">Intermediate</label>
+        <input type="radio" id="coreAdv2" name="core2" value="Advanced" disabled >
+         <label for="coreAdv2">Advance</label>
+        <input type="radio" id="coreExp2" name="core2" value="Expert" disabled >
+         <label for="coreExp2">Expert</label>
+      </td>
+    </tr>
+    <tr>
+      <td id="serCore3"><input type="checkbox" id="core3" name="Rig Up" value="Rig Up"disabled onclick="handlecCre3(this)">
+        <label for="core3"> Rig Up</label><br></td>
+      <td>
+        <input type="radio" id="coreInt3" name="core3" value="Intermediate" disabled >
+         <label for="coreInt3">Intermediate</label>
+        <input type="radio" id="coreAdv3" name="core3" value="Advanced" disabled >
+         <label for="coreAdv3">Advance</label>
+        <input type="radio" id="coreExp3" name="core3" value="Expert" disabled >
+         <label for="coreExp3">Expert</label>
+      </td>
+    </tr>
+    <tr>
+      <td id="serCore4"><input type="checkbox" id="core4" name="Basic Equipment" value="Basic Equipment" disabled onclick="handlecCre4(this)">
+        <label for="core4"> Basic Equipment</label><br></td>
+      <td>
+        <input type="radio" id="coreInt4" name="core4" value="Intermediate" disabled >
+        <label for="coreInt4">Intermediate</label> 
+        <input type="radio" id="coreAdv4" name="core4" value="Advanced" disabled >
+        <label for="coreAdv4">Advance</label>
+        <input type="radio" id="coreExp4" name="core4" value="Expert" disabled >
+        <label for="coreExp4">Expert</label>
+      </td>
+    </tr>
+  </table>
+  </form>
+  <div id="stickyBottomCore"><button id ="clearCore" type ="button" onclick="clearRadioButtonscore(),clearcheckcore()"> Clear Selection</button> </div>
+ </Div>
+
+<Div id="WlDiv">
+  <form name="wl">
+  <p style="font-size: 18px;"><strong>Select WL Specific Safety Services</strong></p>
+  <table style="width:100%">
+    <tr>
+      <th>Services</th>
+      <th>Expertise Level</th>
+    </tr>
+    <tr>
+      <td id="serWl1"><input type="checkbox" id="wl1" name="Radiation" value="Radiation"disabled onclick="handleWl1(this)">
+        <label for="wl1"> Radiation</label><br></td>
+      <td>
+        <input type="radio" id="wlInt1" name="wl1" value="Intermediate" disabled  >
+         <label for="wlInt1">Intermediate</label>
+        <input type="radio" id="wlAdv1" name="wl1" value="Advanced" disabled  >
+         <label for="wlAdv1">Advance</label>
+        <input type="radio" id="wlExp1" name="wl1" value="Expert" disabled >
+         <label for="wlExp1">Expert</label>
+      </td>
+    </tr>
+    <tr>
+      <td id="serWl2"><input type="checkbox" id="wl2" name="Explosives" value="Explosives"disabled onclick="handleWl2(this)">
+        <label for="wl2"> Explosives</label><br></td>
+      <td>
+        <input type="radio" id="wlInt2" name="wl2" value="Intermediate" disabled >
+         <label for="wlInt2">Intermediate</label>
+        <input type="radio" id="wlAdv2" name="wl2" value="Advanced" disabled >
+         <label for="wlAdv2">Advance</label>
+        <input type="radio" id="wlExp2" name="wl2" value="Expert" disabled >
+         <label for="wlExp2">Expert</label>
+      </td>
+    </tr>
+    <tr>
+      <td id="serWl3"><input type="checkbox" id="wl3" name="Pressure Control" value="Pressure Control"disabled onclick="handleWl3(this)">
+        <label for="wl3"> Pressure Control</label><br></td>
+      <td>
+        <input type="radio" id="wlInt3" name="wl3" value="Intermediate" disabled >
+         <label for="wlInt3">Intermediate</label>
+        <input type="radio" id="wlAdv3" name="wl3" value="Advanced" disabled >
+         <label for="wlAdv3">Advance</label>
+        <input type="radio" id="wlExp3" name="wl3" value="Expert" disabled >
+         <label for="wlExp3">Expert</label>
+      </td>
+    </tr>
+    <tr>
+      <td id="serWl4"><input type="checkbox" id="wl4" name="Winch Operation" value="Winch Operation"disabled onclick="handleWl4(this)">
+        <label for="wl4"> Winch Operation</label><br></td>
+      <td>
+        <input type="radio" id="wlInt4" name="wl4" value="Intermediate" disabled >
+         <label for="wlInt4">Intermediate</label>
+        <input type="radio" id="wlAdv4" name="wl4" value="Advanced" disabled >
+         <label for="wlAdv4">Advance</label>
+        <input type="radio" id="wlExp4" name="wl4" value="Expert" disabled >
+         <label for="wlExp4">Expert</label>
+      </td>
+    </tr>
+  </table>
+ </form>
+ <div id="stickyBottomWl"><button id ="clearWl" type ="button" onclick="clearRadioButtonswl(),clearcheckwl()"> Clear Selection</button> </div>
+ </Div>
+
+<Div id="comDiv" >
+  <form name="com" class="comDiv">
   <div id="sticky">
   <p style="font-size: 18px;"><strong>Select Competency Elements</strong></p> </div>
   <table style="width:100%">
@@ -67,11 +190,11 @@
         <label for="com1"> Acoustics</label><br></td>
       <td>
         <input type="radio" id="comInt1" name="com1" value="Intermediate" disabled >
-        &nbsp; <label for="comInt1">Intermediate</label>
+         <label for="comInt1">Intermediate</label>
         <input type="radio" id="comAdv1" name="com1" value="Advanced" disabled>
-        &nbsp; <label for="comAdv1">Advance</label>
+         <label for="comAdv1">Advance</label>
         <input type="radio" id="comExp1" name="com1" value="Expert" disabled >
-        &nbsp; <label for="comExp1">Expert</label>
+         <label for="comExp1">Expert</label>
       </td>
     </tr>
     <tr>
@@ -79,11 +202,11 @@
         <label for="com2"> Borehole Seismic</label><br></td>
       <td>
         <input type="radio" id="comInt2" name="com2" value="Intermediate" disabled >
-        &nbsp; <label for="comInt2">Intermediate</label>
+         <label for="comInt2">Intermediate</label>
         <input type="radio" id="comAdv2" name="com2" value="Advanced" disabled >
-        &nbsp; <label for="comAdv2">Advance</label>
+         <label for="comAdv2">Advance</label>
         <input type="radio" id="comExp2" name="com2" value="Expert" disabled >
-        &nbsp; <label for="comExp2">Expert</label>
+         <label for="comExp2">Expert</label>
       </td>
     </tr>
     <tr>
@@ -91,11 +214,11 @@
         <label for="com3"> Cement Logging</label><br></td>
       <td>
         <input type="radio" id="comInt3" name="com3" value="Intermediate" disabled >
-        &nbsp; <label for="comInt3">Intermediate</label>
+         <label for="comInt3">Intermediate</label>
         <input type="radio" id="comAdv3" name="com3" value="Advanced" disabled >
-        &nbsp; <label for="comAdv3">Advance</label>
+         <label for="comAdv3">Advance</label>
         <input type="radio" id="comExp3" name="com3" value="Expert" disabled >
-        &nbsp; <label for="comExp3">Expert</label>
+         <label for="comExp3">Expert</label>
       </td>
     </tr>
     <tr>
@@ -103,11 +226,11 @@
         <label for="com4"> Coring</label><br></td>
       <td>
         <input type="radio" id="comInt4" name="com4" value="Intermediate" disabled >
-        &nbsp; <label for="comInt4">Intermediate</label>
+         <label for="comInt4">Intermediate</label>
         <input type="radio" id="comAdv4" name="com4" value="Advanced" disabled >
-        &nbsp; <label for="comAdv4">Advance</label>
+         <label for="comAdv4">Advance</label>
         <input type="radio" id="comExp4" name="com4" value="Expert" disabled >
-        &nbsp; <label for="comExp4">Expert</label>
+         <label for="comExp4">Expert</label>
       </td>
     </tr>
     <tr>
@@ -115,11 +238,11 @@
         <label for="com5"> Corrosion</label><br></td>
       <td>
         <input type="radio" id="comInt5" name="com5" value="Intermediate" disabled >
-        &nbsp; <label for="comInt5">Intermediate</label>
+         <label for="comInt5">Intermediate</label>
         <input type="radio" id="comAdv5" name="com5" value="Advanced" disabled >
-        &nbsp; <label for="comAdv5">Advance</label>
+         <label for="comAdv5">Advance</label>
         <input type="radio" id="comExp5" name="com5" value="Expert" disabled >
-        &nbsp; <label for="comExp5">Expert</label>
+         <label for="comExp5">Expert</label>
       </td>
     </tr>
     <tr>
@@ -127,11 +250,11 @@
         <label for="com6"> Geology</label><br></td>
       <td>
         <input type="radio" id="comInt6" name="com6" value="Intermediate" disabled >
-        &nbsp; <label for="comInt6">Intermediate</label>
+         <label for="comInt6">Intermediate</label>
         <input type="radio" id="comAdv6" name="com6" value="Advanced" disabled >
-        &nbsp; <label for="comAdv6">Advance</label>
+         <label for="comAdv6">Advance</label>
         <input type="radio" id="comExp6" name="com6" value="Expert" disabled >
-        &nbsp; <label for="comExp6">Expert</label>
+         <label for="comExp6">Expert</label>
       </td>
     </tr>
     <tr>
@@ -139,11 +262,11 @@
         <label for="com7"> Magnetic Resonance</label><br></td>
       <td>
         <input type="radio" id="comInt7" name="com7" value="Intermediate" disabled >
-        &nbsp; <label for="comInt7">Intermediate</label>
+         <label for="comInt7">Intermediate</label>
         <input type="radio" id="comAdv7" name="com7" value="Advanced" disabled >
-        &nbsp; <label for="comAdv7">Advance</label>
+         <label for="comAdv7">Advance</label>
         <input type="radio" id="comExp7" name="com7" value="Expert" disabled >
-        &nbsp; <label for="comExp7">Expert</label>
+         <label for="comExp7">Expert</label>
       </td>
     </tr>
     <tr>
@@ -151,11 +274,11 @@
         <label for="com8"> Nuclear</label><br></td>
       <td>
         <input type="radio" id="comInt8" name="com8" value="Intermediate" disabled >
-        &nbsp; <label for="comInt8">Intermediate</label>
+         <label for="comInt8">Intermediate</label>
         <input type="radio" id="comAdv8" name="com8" value="Advanced" disabled >
-        &nbsp; <label for="comAdv8">Advance</label>
+         <label for="comAdv8">Advance</label>
         <input type="radio" id="comExp8" name="com8" value="Expert" disabled >
-        &nbsp; <label for="comExp8">Expert</label>
+         <label for="comExp8">Expert</label>
       </td>
     </tr>
     <tr>
@@ -163,11 +286,11 @@
         <label for="com9"> Plugs & Packers </label><br></td>
       <td>
         <input type="radio" id="comInt9" name="com9" value="Intermediate" disabled >
-        &nbsp; <label for="comInt9">Intermediate</label>
+         <label for="comInt9">Intermediate</label>
         <input type="radio" id="comAdv9" name="com9" value="Advanced" disabled >
-        &nbsp; <label for="comAdv9">Advance</label>
+         <label for="comAdv9">Advance</label>
         <input type="radio" id="comExp9" name="com9" value="Expert" disabled >
-        &nbsp; <label for="comExp9">Expert</label>
+         <label for="comExp9">Expert</label>
       </td>
     </tr>
     <tr>
@@ -175,11 +298,11 @@
         <label for="com10"> Perforation</label><br></td>
       <td>
         <input type="radio" id="comInt10" name="com10" value="Intermediate" disabled >
-        &nbsp; <label for="comInt10">Intermediate</label>
+         <label for="comInt10">Intermediate</label>
         <input type="radio" id="comAdv10" name="com10" value="Advanced" disabled >
-        &nbsp; <label for="comAdv10">Advance</label>
+         <label for="comAdv10">Advance</label>
         <input type="radio" id="comExp10" name="com10" value="Expert" disabled >
-        &nbsp; <label for="comExp10">Expert</label>
+         <label for="comExp10">Expert</label>
       </td>
     </tr>
     <tr>
@@ -187,11 +310,11 @@
         <label for="com11"> Production Logging</label><br></td>
       <td>
         <input type="radio" id="comInt11" name="com11" value="Intermediate" disabled disabled >
-        &nbsp; <label for="comInt11">Intermediate</label>
+         <label for="comInt11">Intermediate</label>
         <input type="radio" id="comAdv11" name="com11" value="Advanced" disabled >
-        &nbsp; <label for="comAdv11">Advance</label>
+         <label for="comAdv11">Advance</label>
         <input type="radio" id="comExp11" name="com11" value="Expert" disabled >
-        &nbsp; <label for="comExp11">Expert</label>
+         <label for="comExp11">Expert</label>
       </td>
     </tr>
     <tr>
@@ -199,11 +322,11 @@
         <label for="com12"> Reservoir Monitoring</label><br></td>
       <td>
         <input type="radio" id="comInt12" name="com12" value="Intermediate" disabled >
-        &nbsp; <label for="comInt12">Intermediate</label>
+         <label for="comInt12">Intermediate</label>
         <input type="radio" id="comAdv12" name="com12" value="Advanced" disabled >
-        &nbsp; <label for="comAdv12">Advance</label>
+         <label for="comAdv12">Advance</label>
         <input type="radio" id="comExp12" name="com12" value="Expert" disabled >
-        &nbsp; <label for="comExp12">Expert</label>
+         <label for="comExp12">Expert</label>
       </td>
     </tr>
     <tr>
@@ -211,11 +334,11 @@
         <label for="com13"> Reservoir Pressure & Sampling</label><br></td>
       <td>
         <input type="radio" id="comInt13" name="com13" value="Intermediate" disabled >
-        &nbsp; <label for="comInt13">Intermediate</label>
+         <label for="comInt13">Intermediate</label>
         <input type="radio" id="comAdv13" name="com13" value="Advanced" disabled >
-        &nbsp; <label for="comAdv13">Advance</label>
+         <label for="comAdv13">Advance</label>
         <input type="radio" id="comExp13" name="com13" value="Expert" disabled >
-        &nbsp; <label for="comExp13">Expert</label>
+         <label for="comExp13">Expert</label>
       </td>
     </tr>
     <tr>
@@ -223,11 +346,11 @@
         <label for="com14"> Resistivity</label><br></td>
       <td>
         <input type="radio" id="comInt14" name="com14" value="Intermediate" disabled >
-        &nbsp; <label for="comInt14">Intermediate</label>
+         <label for="comInt14">Intermediate</label>
         <input type="radio" id="comAdv14" name="com14" value="Advanced" disabled >
-        &nbsp; <label for="comAdv14">Advance</label>
+         <label for="comAdv14">Advance</label>
         <input type="radio" id="comExp14" name="com14" value="Expert" disabled >
-        &nbsp; <label for="comExp14">Expert</label>
+         <label for="comExp14">Expert</label>
       </td>
     </tr>
     <tr>
@@ -235,11 +358,11 @@
         <label for="com15"> ReSOLVE</label><br></td>
       <td>
         <input type="radio" id="comInt15" name="com15" value="Intermediate" disabled >
-        &nbsp; <label for="comInt15">Intermediate</label>
+         <label for="comInt15">Intermediate</label>
         <input type="radio" id="comAdv15" name="com15" value="Advanced" disabled >
-        &nbsp; <label for="comAdv15">Advance</label>
+         <label for="comAdv15">Advance</label>
         <input type="radio" id="comExp15" name="com15" value="Expert" disabled >
-        &nbsp; <label for="comExp15">Expert</label>
+         <label for="comExp15">Expert</label>
       </td>
     </tr>
     <tr>
@@ -247,11 +370,11 @@
         <label for="com16"> Pipe Recovery </label><br></td>
       <td>
         <input type="radio" id="comInt16" name="com16" value="Intermediate" disabled >
-        &nbsp; <label for="comInt16">Intermediate</label>
+         <label for="comInt16">Intermediate</label>
         <input type="radio" id="comAdv16" name="com16" value="Advanced" disabled >
-        &nbsp; <label for="comAdv16">Advance</label>
+         <label for="comAdv16">Advance</label>
         <input type="radio" id="comExp16" name="com16" value="Expert" disabled >
-        &nbsp; <label for="comExp16">Expert</label>
+         <label for="comExp16">Expert</label>
       </td>
     </tr>
     <tr>
@@ -259,141 +382,29 @@
         <label for="com17"> Conveyance</label><br></td>
       <td>
         <input type="radio" id="comInt17" name="com17" value="Intermediate" disabled >
-        &nbsp; <label for="comInt17">Intermediate</label>
+         <label for="comInt17">Intermediate</label>
         <input type="radio" id="comAdv17" name="com17" value="Advanced" disabled >
-        &nbsp; <label for="comAdv17">Advance</label>
+         <label for="comAdv17">Advance</label>
         <input type="radio" id="comExp17" name="com17" value="Expert" disabled >
-        &nbsp; <label for="comExp17">Expert</label>
+         <label for="comExp17">Expert</label>
       </td>
     </tr>
   </table>
-</div>
-
- <Div id="WlDiv">
-  <p style="font-size: 18px;"><strong>Select WL Specific Safety Services</strong></p>
-  <table style="width:100%">
-    <tr>
-      <th>Services</th>
-      <th>Expertise Level</th>
-    </tr>
-    <tr>
-      <td id="serWl1"><input type="checkbox" id="wl1" name="Radiation" value="Radiation"disabled onclick="handleWl1(this)">
-        <label for="wl1"> Radiation</label><br></td>
-      <td>
-        <input type="radio" id="wlInt1" name="wl1" value="Intermediate" disabled  >
-        &nbsp; <label for="wlInt1">Intermediate</label>
-        <input type="radio" id="wlAdv1" name="wl1" value="Advanced" disabled  >
-        &nbsp; <label for="wlAdv1">Advance</label>
-        <input type="radio" id="wlExp1" name="wl1" value="Expert" disabled >
-        &nbsp; <label for="wlExp1">Expert</label>
-      </td>
-    </tr>
-    <tr>
-      <td id="serWl2"><input type="checkbox" id="wl2" name="Explosives" value="Explosives"disabled onclick="handleWl2(this)">
-        <label for="wl2"> Explosives</label><br></td>
-      <td>
-        <input type="radio" id="wlInt2" name="wl2" value="Intermediate" disabled >
-        &nbsp; <label for="wlInt2">Intermediate</label>
-        <input type="radio" id="wlAdv2" name="wl2" value="Advanced" disabled >
-        &nbsp; <label for="wlAdv2">Advance</label>
-        <input type="radio" id="wlExp2" name="wl2" value="Expert" disabled >
-        &nbsp; <label for="wlExp2">Expert</label>
-      </td>
-    </tr>
-    <tr>
-      <td id="serWl3"><input type="checkbox" id="wl3" name="Pressure Control" value="Pressure Control"disabled onclick="handleWl3(this)">
-        <label for="wl3"> Pressure Control</label><br></td>
-      <td>
-        <input type="radio" id="wlInt3" name="wl3" value="Intermediate" disabled >
-        &nbsp; <label for="wlInt3">Intermediate</label>
-        <input type="radio" id="wlAdv3" name="wl3" value="Advanced" disabled >
-        &nbsp; <label for="wlAdv3">Advance</label>
-        <input type="radio" id="wlExp3" name="wl3" value="Expert" disabled >
-        &nbsp; <label for="wlExp3">Expert</label>
-      </td>
-    </tr>
-    <tr>
-      <td id="serWl4"><input type="checkbox" id="wl4" name="Winch Operation" value="Winch Operation"disabled onclick="handleWl4(this)">
-        <label for="wl4"> Winch Operation</label><br></td>
-      <td>
-        <input type="radio" id="wlInt4" name="wl4" value="Intermediate" disabled >
-        &nbsp; <label for="wlInt4">Intermediate</label>
-        <input type="radio" id="wlAdv4" name="wl4" value="Advanced" disabled >
-        &nbsp; <label for="wlAdv4">Advance</label>
-        <input type="radio" id="wlExp4" name="wl4" value="Expert" disabled >
-        &nbsp; <label for="wlExp4">Expert</label>
-      </td>
-    </tr>
-  </table>
- </Div>
-
-
- <Div id="coreDiv">
-  <p style="font-size: 18px;"><strong>Select Core Services</strong></p>
-  <table style="width:100%">
-    <tr>
-      <th>Services</th>
-      <th>Expertise Level</th>
-    </tr>
-    <tr>
-      <td id="serCore1"><input type="checkbox" id="core1" name="Winch Control" value="Winch Control"disabled onclick="handlecCre1(this)" >
-        <label for="core1"> Winch Control</label><br></td>
-      <td>
-        <input type="radio" id="coreInt1" name="core1" value="Intermediate" disabled >
-        &nbsp; <label for="coreInt1">Intermediate</label>
-        <input type="radio" id="coreAdv1" name="core1" value="Advanced" disabled >
-        &nbsp; <label for="coreAdv1">Advance</label>
-        <input type="radio" id="coreExp1" name="core1" value="Expert" disabled  >
-        &nbsp; <label for="coreExp1">Expert</label>
-      </td>
-    </tr>
-    <tr>
-      <td id="serCore2"><input type="checkbox" id="core2" name="Units" value="Units"disabled onclick="handlecCre2(this)">
-        <label for="core2"> Units</label><br></td>
-      <td>
-        <input type="radio" id="coreInt2" name="core2" value="Intermediate" disabled >
-        &nbsp; <label for="coreInt2">Intermediate</label>
-        <input type="radio" id="coreAdv2" name="core2" value="Advanced" disabled >
-        &nbsp; <label for="coreAdv2">Advance</label>
-        <input type="radio" id="coreExp2" name="core2" value="Expert" disabled >
-        &nbsp; <label for="coreExp2">Expert</label>
-      </td>
-    </tr>
-    <tr>
-      <td id="serCore3"><input type="checkbox" id="core3" name="Rig Up" value="Rig Up"disabled onclick="handlecCre3(this)">
-        <label for="core3"> Rig Up</label><br></td>
-      <td>
-        <input type="radio" id="coreInt3" name="core3" value="Intermediate" disabled >
-        &nbsp; <label for="coreInt3">Intermediate</label>
-        <input type="radio" id="coreAdv3" name="core3" value="Advanced" disabled >
-        &nbsp; <label for="coreAdv3">Advance</label>
-        <input type="radio" id="coreExp3" name="core3" value="Expert" disabled >
-        &nbsp; <label for="coreExp3">Expert</label>
-      </td>
-    </tr>
-    <tr>
-      <td id="serCore4"><input type="checkbox" id="core4" name="Basic Equipment" value="Basic Equipment" disabled onclick="handlecCre4(this)">
-        <label for="core4"> Basic Equipment</label><br></td>
-      <td>
-        <input type="radio" id="coreInt4" name="core4" value="Intermediate" disabled >
-        &nbsp; <label for="coreInt4">Intermediate</label>
-        <input type="radio" id="coreAdv4" name="core4" value="Advanced" disabled >
-        &nbsp; <label for="coreAdv4">Advance</label>
-        <input type="radio" id="coreExp4" name="core4" value="Expert" disabled >
-        &nbsp; <label for="coreExp4">Expert</label>
-      </td>
-    </tr>
-  </table>
- </Div>
+  </form>
+  <div id="stickyBottom"><button id ="clearCom" type ="button" onclick="clearRadioButtonsCom(),clearcheckCom()"> Clear Selection</button> </div>
+  </div>
 </div>
 
 <div id="actionButtons">
-  <button id ="button" type="button"onclick="showName(),showAGrade(),showResult()" disabled > Submit </button>
+  <!-- <button id ="clearCore" type ="button" onclick="clearRadioButtonsInt(),clearRadioButtonsAdv(),clearRadioButtonsExp()"> Clear Expertise Selection</button>  -->
+  <!-- <button id ="button" type="button"onclick="getCheckboxCount()"> Submit2 </button> -->
+  <!-- <button onclick="G08()">Count Checkboxes</button>  -->
   <button id ="refresh" type="button"onclick="location.reload();"> Refresh </button>
+  <button id ="submitbutton" type="button"onclick="showName(),calculateGrade(),showResult()" disabled > Submit </button>
 </div>
   
   <div id ="result" style="border: 2px solid;margin-top: 20px; display: none;">
-    <p style="padding-left: 5px;padding-right: 5px;">Your Candidate <span style="font-weight: bold" id="CandName"></span> is a grade <span style="font-weight: bold" id="Grade"></span> Candidate</p>
+    <p style="padding-left: 5px;padding-right: 5px;"><span style="font-weight: bold" id="errorGrade">Your Candidate <span style="font-weight: bold" id="CandName"></span> is a grade <span style="font-weight: bold" id="Grade"></span> Candidate</span></p>
   </div>
 
 
@@ -469,11 +480,11 @@
     <p>Please select technical expertise:
 
     </p><div><input type="radio" id="compInt" name="profile_Comp" value="Intermediate" disabled >
-    &nbsp; <label for="compInt">INTERMEDIATE</label></div>
+     <label for="compInt">INTERMEDIATE</label></div>
     <div><input type="radio" id="compAdv" name="profile_Comp" value="Advanced" disabled >
-    &nbsp; <label for="compAdv">ADVANCED</label></div>
+     <label for="compAdv">ADVANCED</label></div>
       <div><input type="radio" id="compExp" name="profile_Comp" value="Expert" disabled >
-    &nbsp; <label for="compExp">EXPERT</label></div>
+     <label for="compExp">EXPERT</label></div>
   </div> -->
 
 <!-- <label for="comp">Select WL Specific Safety:</label>  
@@ -487,11 +498,11 @@
   <p>Please select technical expertise:
 
   </p><div><input type="radio" id="wlInt" name="profile_wl" value="Intermediate" disabled >
-    &nbsp; <label for="wlInt">INTERMEDIATE</label></div>
+     <label for="wlInt">INTERMEDIATE</label></div>
     <div><input type="radio" id="wlAdv" name="profile_wl" value="Advanced" disabled >
-    &nbsp; <label for="wlAdv">ADVANCED</label></div>
+     <label for="wlAdv">ADVANCED</label></div>
       <div><input type="radio" id="wlExp" name="profile_wl" value="Expert" disabled >
-    &nbsp; <label for="wlExp">EXPERT</label></div>
+     <label for="wlExp">EXPERT</label></div>
 </div> -->
 
 
@@ -506,9 +517,9 @@
   <p>Please select technical expertise:
 
   </p><div><input type="radio" id="coreInt" name="profile_core" value="Intermediate" disabled >
-  &nbsp; <label for="coreInt">INTERMEDIATE</label></div>
+   <label for="coreInt">INTERMEDIATE</label></div>
   <div><input type="radio" id="coreAdv" name="profile_core" value="Advanced" disabled >
-  &nbsp; <label for="coreAdv">ADVANCED</label></div>
+   <label for="coreAdv">ADVANCED</label></div>
     <div><input type="radio" id="coreExp" name="profile_core" value="Expert" disabled >
-  &nbsp; <label for="coreExp">EXPERT</label></div>
+   <label for="coreExp">EXPERT</label></div>
 </div> -->

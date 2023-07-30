@@ -1,3 +1,14 @@
+// function checkSpace(){
+//     var val = document.getElementById('myText').value;
+//     if(val.charAt(0)==" "){
+//       alert("Name field Cannot be empty")
+//     }
+//   }
+
+document.getElementById("UserName").addEventListener('keydown', function (e) {
+    if (this.value.length === 0 && e.which === 32) e.preventDefault();
+  });
+
 
 function handleComp() {
     if (this.value == '01') {
@@ -31,6 +42,14 @@ function handletechtest() {
     }
 }
  
+function enableSubmit() {
+    if (this.value == '01') {
+        document.getElementById('submitbutton').disabled = true;
+    } else {
+        document.getElementById('submitbutton').disabled = false;
+    }
+}
+
 function showDev(){
     var element = document.getElementById("devTech");
     element.style.display = "inline";
@@ -708,3 +727,301 @@ function handlecCre4(core4) {
     }
 }
 
+
+// function getCheckboxCount() {
+//     return document.querySelectorAll('input[name=Winch Control]:checked').length;
+//   }
+
+// console.log(getCheckboxCount());  
+
+function calculateGrade(){
+    var a = document.forms["core"];
+    var b = document.forms["wl"];
+    var c = document.forms["com"];
+    var coreCheck =a.querySelectorAll('input[type="checkbox"]:checked');
+    var coreIntCheck =a.querySelectorAll('input[value="Intermediate"]:checked');
+    var coreAdvCheck =a.querySelectorAll('input[value="Advanced"]:checked');
+    var coreExpCheck =a.querySelectorAll('input[value="Expert"]:checked');
+    var wlCheck =b.querySelectorAll('input[type="checkbox"]:checked');
+    var wlIntCheck =b.querySelectorAll('input[value="Intermediate"]:checked');
+    var wlAdvCheck =b.querySelectorAll('input[value="Advanced"]:checked');
+    var wlExpCheck =b.querySelectorAll('input[value="Expert"]:checked');
+    var comCheck =c.querySelectorAll('input[type="checkbox"]:checked');
+    var comIntCheck =c.querySelectorAll('input[value="Intermediate"]:checked');
+    var comAdvCheck =c.querySelectorAll('input[value="Advanced"]:checked');
+    var comExpCheck =c.querySelectorAll('input[value="Expert"]:checked');
+
+    if(coreCheck.length >=3 && coreIntCheck.length >=3 && wlCheck.length >= 1 && wlIntCheck.length >= 1 && comCheck.length >= 6 && comIntCheck.length >= 6)
+    {
+        document.getElementById("Grade").textContent="G08";
+    }
+    if(coreCheck.length >= 3 && coreAdvCheck.length >=3 && wlCheck.length >= 1 && wlAdvCheck.length >= 1 && comCheck.length >= 6 && comAdvCheck.length >= 6 || comIntCheck.length >= 6)
+    {
+        document.getElementById("Grade").textContent="G09";
+    }
+    if(coreCheck.length >= 3 && coreExpCheck.length >=3 && wlCheck.length >= 1 && wlExpCheck.length >= 1 || wlAdvCheck.length >=2 && comCheck.length >= 8 && comAdvCheck.length >= 8 || comIntCheck.length >= 8)
+    {
+        document.getElementById("Grade").textContent="G10";
+    }
+    if(coreCheck.length >= 3 && coreExpCheck.length >=3 && wlCheck.length >= 1 && wlExpCheck.length >= 2 || wlAdvCheck.length >=3 && comCheck.length >= 11 && comAdvCheck.length >= 11 || comIntCheck.length >= 11)
+    {
+        document.getElementById("Grade").textContent="G11";
+    }
+    else{
+        document.getElementById("errorGrade").textContent="Your Candidate grade is not from our predefined list please click on Refresh and try again later.";
+    }
+}
+
+
+
+
+function clearRadioButtonsCom(){
+    var ele = document.querySelectorAll("input[name= com1]");
+     for(var i=0;i<ele.length;i++){
+        ele[i].checked = false;
+     }
+     var ele2 = document.querySelectorAll("input[name= com2]");
+     for(var i=0;i<ele2.length;i++){
+        ele2[i].checked = false;
+     }
+     var ele3= document.querySelectorAll("input[name= com3]");
+     for(var i=0;i<ele3.length;i++){
+        ele3[i].checked = false;
+
+     }var ele4= document.querySelectorAll("input[name= com4]");
+     for(var i=0;i<ele4.length;i++){
+        ele4[i].checked = false;
+     }
+     var ele5 = document.querySelectorAll("input[name= com5]");
+     for(var i=0;i<ele5.length;i++){
+        ele5[i].checked = false;
+     }
+     var ele6 = document.querySelectorAll("input[name= com6]");
+     for(var i=0;i<ele6.length;i++){
+        ele6[i].checked = false;
+     }
+     var ele7= document.querySelectorAll("input[name= com7]");
+     for(var i=0;i<ele7.length;i++){
+        ele7[i].checked = false;
+        
+     }var ele8= document.querySelectorAll("input[name= com8]");
+     for(var i=0;i<ele8.length;i++){
+        ele8[i].checked = false;
+     }
+     var ele9 = document.querySelectorAll("input[name= com9]");
+     for(var i=0;i<ele9.length;i++){
+        ele9[i].checked = false;
+     }
+     var ele10 = document.querySelectorAll("input[name= com10]");
+     for(var i=0;i<ele10.length;i++){
+        ele10[i].checked = false;
+     }
+     var ele11= document.querySelectorAll("input[name= com11]");
+     for(var i=0;i<ele11.length;i++){
+        ele11[i].checked = false;
+
+     }var ele12= document.querySelectorAll("input[name= com12]");
+     for(var i=0;i<ele12.length;i++){
+        ele12[i].checked = false;
+     }
+     var ele13 = document.querySelectorAll("input[name= com13]");
+     for(var i=0;i<ele13.length;i++){
+        ele13[i].checked = false;
+     }
+     var ele14 = document.querySelectorAll("input[name= com14]");
+     for(var i=0;i<ele14.length;i++){
+        ele14[i].checked = false;
+     }
+     var ele15= document.querySelectorAll("input[name= com15]");
+     for(var i=0;i<ele15.length;i++){
+        ele15[i].checked = false;
+        
+     }var ele16= document.querySelectorAll("input[name= com16]");
+     for(var i=0;i<ele16.length;i++){
+        ele16[i].checked = false;
+     }
+     var ele17= document.querySelectorAll("input[name= com17]");
+     for(var i=0;i<ele17.length;i++){
+        ele17[i].checked = false;
+     }
+  }
+  
+  function clearcheckCom(){
+    var ele = document.querySelectorAll("input[id= com1]");
+     for(var i=0;i<ele.length;i++){
+        ele[i].checked = false;
+     }
+     var ele2 = document.querySelectorAll("input[id= com2]");
+     for(var i=0;i<ele2.length;i++){
+        ele2[i].checked = false;
+     }
+     var ele3= document.querySelectorAll("input[id= com3]");
+     for(var i=0;i<ele3.length;i++){
+        ele3[i].checked = false;
+
+     }var ele4= document.querySelectorAll("input[id= com4]");
+     for(var i=0;i<ele4.length;i++){
+        ele4[i].checked = false;
+     }
+     var ele5 = document.querySelectorAll("input[id= com5]");
+     for(var i=0;i<ele5.length;i++){
+        ele5[i].checked = false;
+     }
+     var ele6 = document.querySelectorAll("input[id= com6]");
+     for(var i=0;i<ele6.length;i++){
+        ele6[i].checked = false;
+     }
+     var ele7= document.querySelectorAll("input[id= com7]");
+     for(var i=0;i<ele7.length;i++){
+        ele7[i].checked = false;
+        
+     }var ele8= document.querySelectorAll("input[id= com8]");
+     for(var i=0;i<ele8.length;i++){
+        ele8[i].checked = false;
+     }
+     var ele9 = document.querySelectorAll("input[id= com9]");
+     for(var i=0;i<ele9.length;i++){
+        ele9[i].checked = false;
+     }
+     var ele10 = document.querySelectorAll("input[id= com10]");
+     for(var i=0;i<ele10.length;i++){
+        ele10[i].checked = false;
+     }
+     var ele11= document.querySelectorAll("input[id= com11]");
+     for(var i=0;i<ele11.length;i++){
+        ele11[i].checked = false;
+
+     }var ele12= document.querySelectorAll("input[id= com12]");
+     for(var i=0;i<ele12.length;i++){
+        ele12[i].checked = false;
+     }
+     var ele13 = document.querySelectorAll("input[id= com13]");
+     for(var i=0;i<ele13.length;i++){
+        ele13[i].checked = false;
+     }
+     var ele14 = document.querySelectorAll("input[id= com14]");
+     for(var i=0;i<ele14.length;i++){
+        ele14[i].checked = false;
+     }
+     var ele15= document.querySelectorAll("input[id= com15]");
+     for(var i=0;i<ele15.length;i++){
+        ele15[i].checked = false;
+        
+     }var ele16= document.querySelectorAll("input[id= com16]");
+     for(var i=0;i<ele16.length;i++){
+        ele16[i].checked = false;
+     }
+     var ele17= document.querySelectorAll("input[id= com17]");
+     for(var i=0;i<ele17.length;i++){
+        ele17[i].checked = false;
+     }
+  }
+
+  function clearRadioButtonswl(){
+    var ele = document.querySelectorAll("input[name= wl1]");
+     for(var i=0;i<ele.length;i++){
+        ele[i].checked = false;
+     }
+     var ele2 = document.querySelectorAll("input[name= wl2]");
+     for(var i=0;i<ele2.length;i++){
+        ele2[i].checked = false;
+     }
+     var ele3= document.querySelectorAll("input[name= wl3]");
+     for(var i=0;i<ele3.length;i++){
+        ele3[i].checked = false;
+
+     }var ele4= document.querySelectorAll("input[name= wl4]");
+     for(var i=0;i<ele4.length;i++){
+        ele4[i].checked = false;
+     }
+} 
+
+function clearcheckwl(){
+    var ele = document.querySelectorAll("input[id= wl1]");
+     for(var i=0;i<ele.length;i++){
+        ele[i].checked = false;
+     }
+     var ele2 = document.querySelectorAll("input[id= wl2]");
+     for(var i=0;i<ele2.length;i++){
+        ele2[i].checked = false;
+     }
+     var ele3= document.querySelectorAll("input[id= wl3]");
+     for(var i=0;i<ele3.length;i++){
+        ele3[i].checked = false;
+
+     }var ele4= document.querySelectorAll("input[id= wl4]");
+     for(var i=0;i<ele4.length;i++){
+        ele4[i].checked = false;
+     }
+  }
+
+  function clearRadioButtonscore(){
+    var ele = document.querySelectorAll("input[name= core1]");
+     for(var i=0;i<ele.length;i++){
+        ele[i].checked = false;
+     }
+     var ele2 = document.querySelectorAll("input[name= core2]");
+     for(var i=0;i<ele2.length;i++){
+        ele2[i].checked = false;
+     }
+     var ele3= document.querySelectorAll("input[name= core3]");
+     for(var i=0;i<ele3.length;i++){
+        ele3[i].checked = false;
+
+     }var ele4= document.querySelectorAll("input[name= core4]");
+     for(var i=0;i<ele4.length;i++){
+        ele4[i].checked = false;
+     }
+} 
+
+function clearcheckcore(){
+    var ele = document.querySelectorAll("input[id= core1]");
+     for(var i=0;i<ele.length;i++){
+        ele[i].checked = false;
+     }
+     var ele2 = document.querySelectorAll("input[id= core2]");
+     for(var i=0;i<ele2.length;i++){
+        ele2[i].checked = false;
+     }
+     var ele3= document.querySelectorAll("input[id= core3]");
+     for(var i=0;i<ele3.length;i++){
+        ele3[i].checked = false;
+
+     }var ele4= document.querySelectorAll("input[id= core4]");
+     for(var i=0;i<ele4.length;i++){
+        ele4[i].checked = false;
+     }
+  }
+
+// function clearRadioButtonsAdv(){
+//     var ele = document.querySelectorAll("input[value= Advanced]");
+//      for(var i=0;i<ele.length;i++){
+//         ele[i].checked = false;
+//      }
+//   }
+
+//   function clearRadioButtonsExp(){
+//     var ele = document.querySelectorAll("input[value= Expert]");
+//      for(var i=0;i<ele.length;i++){
+//         ele[i].checked = false;
+//      }
+//   }
+  // // return x.length;
+    // alert(y.length);
+    // if(x.length >= 2){
+    //     console.log("Grade 2")
+    //  }
+    //  if(x.length < 2){
+    //     console.log("Grade 1")
+    //  }
+
+
+
+// function generateGrade(){
+//     if(countCheckboxes()>2){
+//        console.log("Grade 1")
+//     }
+//     else{
+//         console.log("Grade 2")  
+//     }
+// }   
