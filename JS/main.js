@@ -751,23 +751,35 @@ function calculateGrade(){
     var comAdvCheck =c.querySelectorAll('input[value="Advanced"]:checked');
     var comExpCheck =c.querySelectorAll('input[value="Expert"]:checked');
 
-    if(coreCheck.length >=3 && coreIntCheck.length >=3 && wlCheck.length >= 1 && wlIntCheck.length >= 1 && comCheck.length >= 6 && comIntCheck.length >= 6)
+    if(coreCheck.length >=3 && coreIntCheck.length >=3 && wlCheck.length >= 1 && wlIntCheck.length >= 1 && comCheck.length >= 6 && comIntCheck.length == 6)
     {
         document.getElementById("Grade").textContent="G08";
+        // console.log(coreCheck.length,coreIntCheck.length,wlCheck.length,wlIntCheck.length,comCheck.length,comIntCheck.length,"G08")
     }
-    if(coreCheck.length >= 3 && coreAdvCheck.length >=3 && wlCheck.length >= 1 && wlAdvCheck.length >= 1 && comCheck.length >= 6 && comAdvCheck.length >= 6 || comIntCheck.length >= 6)
+    else if(coreCheck.length >= 3 && coreAdvCheck.length >=3 && wlCheck.length >= 1 && wlAdvCheck.length >= 1 && comCheck.length >= 6 && comAdvCheck.length >= 6 || 
+        coreCheck.length >= 3 && coreAdvCheck.length >=3 && wlCheck.length >= 1 && wlAdvCheck.length >= 1 && comCheck.length >= 6 && comIntCheck.length >= 6 ) 
     {
         document.getElementById("Grade").textContent="G09";
+        // console.log(coreCheck.length,coreAdvCheck.length,wlCheck.length,wlAdvCheck.length,comCheck.length,comAdvCheck.length,"G09")
     }
-    if(coreCheck.length >= 3 && coreExpCheck.length >=3 && wlCheck.length >= 1 && wlExpCheck.length >= 1 || wlAdvCheck.length >=2 && comCheck.length >= 8 && comAdvCheck.length >= 8 || comIntCheck.length >= 8)
+    else if(coreCheck.length >= 3 && coreExpCheck.length >=3 && wlCheck.length >= 1 && wlExpCheck.length >= 1  && comCheck.length >= 8 && comCheck.length < 11 && comAdvCheck.length >= 8 && comAdvCheck.length < 11 || 
+        coreCheck.length >= 3 && coreExpCheck.length >=3 && wlCheck.length >= 2 && wlAdvCheck.length >= 2  && comCheck.length >= 8 && comCheck.length < 11 && comAdvCheck.length >= 8 && comAdvCheck.length < 11 || 
+        coreCheck.length >= 3 && coreExpCheck.length >=3 && wlCheck.length >= 1 && wlExpCheck.length >= 1  && comCheck.length >= 8 && comCheck.length < 11 && comIntCheck.length >= 8 && comIntCheck.length < 11 ||
+        coreCheck.length >= 3 && coreExpCheck.length >=3 && wlCheck.length >= 2 && wlAdvCheck.length >= 2  && comCheck.length >= 8 && comCheck.length < 11 && comIntCheck.length >= 8 && comIntCheck.length < 11
+        )
     {
         document.getElementById("Grade").textContent="G10";
     }
-    if(coreCheck.length >= 3 && coreExpCheck.length >=3 && wlCheck.length >= 1 && wlExpCheck.length >= 2 || wlAdvCheck.length >=3 && comCheck.length >= 11 && comAdvCheck.length >= 11 || comIntCheck.length >= 11)
+    else if(coreCheck.length >= 3 && coreExpCheck.length >=3 && wlCheck.length >= 2 && wlExpCheck.length >= 2  && comCheck.length >= 11 && comAdvCheck.length >= 11 || 
+        coreCheck.length >= 3 && coreExpCheck.length >=3 && wlCheck.length >= 3 && wlAdvCheck.length >= 3  && comCheck.length >= 11 && comAdvCheck.length >= 11 ||
+        coreCheck.length >= 3 && coreExpCheck.length >=3 && wlCheck.length >= 2 && wlExpCheck.length >= 2  && comCheck.length >= 11 && comIntCheck.length >= 11 || 
+        coreCheck.length >= 3 && coreExpCheck.length >=3 && wlCheck.length >= 3 && wlAdvCheck.length >= 3  && comCheck.length >= 11 && comIntCheck.length >= 11
+        )
     {
         document.getElementById("Grade").textContent="G11";
     }
-    else{
+    else if (document.getElementById("Grade").textContent=" ")
+    {
         document.getElementById("errorGrade").textContent="Your Candidate grade is not from our predefined list please click on Refresh and try again later.";
     }
 }
