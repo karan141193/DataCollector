@@ -750,30 +750,32 @@ function calculateGrade(){
     var comIntCheck =c.querySelectorAll('input[value="Intermediate"]:checked');
     var comAdvCheck =c.querySelectorAll('input[value="Advanced"]:checked');
     var comExpCheck =c.querySelectorAll('input[value="Expert"]:checked');
+    //G08
+    var d = coreIntCheck.length +coreAdvCheck.length+coreExpCheck.length;
+    var e= wlIntCheck.length+wlAdvCheck.length+wlExpCheck.length;
+    var f = comIntCheck.length+comAdvCheck.length+comExpCheck.length;
+    
+    //G09
+    var g = coreAdvCheck.length+coreExpCheck.length;
+    var h = wlAdvCheck.length+wlExpCheck.length;
 
-    if(coreCheck.length >=3 && coreIntCheck.length >=3 && wlCheck.length >= 1 && wlIntCheck.length >= 1 && comCheck.length >= 6 && comIntCheck.length == 6)
+    //G10
+    var i = wlIntCheck.length+wlAdvCheck.length;
+    if( coreIntCheck.length >=1 && d >=3 && e >= 1 && f >= 6)
     {
         document.getElementById("Grade").textContent="G08";
-        // console.log(coreCheck.length,coreIntCheck.length,wlCheck.length,wlIntCheck.length,comCheck.length,comIntCheck.length,"G08")
     }
-    else if(coreCheck.length >= 3 && coreAdvCheck.length >=3 && wlCheck.length >= 1 && wlAdvCheck.length >= 1 && comCheck.length >= 6 && comAdvCheck.length >= 6 || 
-        coreCheck.length >= 3 && coreAdvCheck.length >=3 && wlCheck.length >= 1 && wlAdvCheck.length >= 1 && comCheck.length >= 6 && comIntCheck.length >= 6 ) 
+    else if( coreIntCheck.length === 0 && g >=3 && wlIntCheck.length === 0 && h >= 1 && f >= 6 && f <=7) 
     {
         document.getElementById("Grade").textContent="G09";
-        // console.log(coreCheck.length,coreAdvCheck.length,wlCheck.length,wlAdvCheck.length,comCheck.length,comAdvCheck.length,"G09")
     }
-    else if(coreCheck.length >= 3 && coreExpCheck.length >=3 && wlCheck.length >= 1 && wlExpCheck.length >= 1  && comCheck.length >= 8 && comCheck.length < 11 && comAdvCheck.length >= 8 && comAdvCheck.length < 11 || 
-        coreCheck.length >= 3 && coreExpCheck.length >=3 && wlCheck.length >= 2 && wlAdvCheck.length >= 2  && comCheck.length >= 8 && comCheck.length < 11 && comAdvCheck.length >= 8 && comAdvCheck.length < 11 || 
-        coreCheck.length >= 3 && coreExpCheck.length >=3 && wlCheck.length >= 1 && wlExpCheck.length >= 1  && comCheck.length >= 8 && comCheck.length < 11 && comIntCheck.length >= 8 && comIntCheck.length < 11 ||
-        coreCheck.length >= 3 && coreExpCheck.length >=3 && wlCheck.length >= 2 && wlAdvCheck.length >= 2  && comCheck.length >= 8 && comCheck.length < 11 && comIntCheck.length >= 8 && comIntCheck.length < 11
-        )
+    else if( coreIntCheck.length === 0 && coreAdvCheck.length === 0 && wlIntCheck.length ===0 && wlAdvCheck.length ===0 && coreExpCheck.length>= 3 && wlExpCheck.length>=1 && f>=8 && f<=10||
+        coreIntCheck.length === 0 && coreAdvCheck.length === 0 && coreExpCheck.length>= 3 && i>=2 && f>=8 && f<=10)
     {
         document.getElementById("Grade").textContent="G10";
     }
-    else if(coreCheck.length >= 3 && coreExpCheck.length >=3 && wlCheck.length >= 2 && wlExpCheck.length >= 2  && comCheck.length >= 11 && comAdvCheck.length >= 11 || 
-        coreCheck.length >= 3 && coreExpCheck.length >=3 && wlCheck.length >= 3 && wlAdvCheck.length >= 3  && comCheck.length >= 11 && comAdvCheck.length >= 11 ||
-        coreCheck.length >= 3 && coreExpCheck.length >=3 && wlCheck.length >= 2 && wlExpCheck.length >= 2  && comCheck.length >= 11 && comIntCheck.length >= 11 || 
-        coreCheck.length >= 3 && coreExpCheck.length >=3 && wlCheck.length >= 3 && wlAdvCheck.length >= 3  && comCheck.length >= 11 && comIntCheck.length >= 11
+    else if(coreIntCheck.length === 0 && coreAdvCheck.length === 0 && wlIntCheck.length ===0 && wlAdvCheck.length ===0 && coreExpCheck.length>= 3 && wlExpCheck.length>=2 && f>=11 ||
+        coreIntCheck.length === 0 && coreAdvCheck.length === 0 && coreExpCheck.length>= 3 && i>=3 && f>=11
         )
     {
         document.getElementById("Grade").textContent="G11";
