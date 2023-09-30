@@ -750,6 +750,7 @@ function calculateGrade(){
     var comIntCheck =c.querySelectorAll('input[value="Intermediate"]:checked');
     var comAdvCheck =c.querySelectorAll('input[value="Advanced"]:checked');
     var comExpCheck =c.querySelectorAll('input[value="Expert"]:checked');
+    
     //G08
     var d = coreIntCheck.length +coreAdvCheck.length+coreExpCheck.length;
     var e= wlIntCheck.length+wlAdvCheck.length+wlExpCheck.length;
@@ -765,7 +766,7 @@ function calculateGrade(){
     {
         document.getElementById("Grade").textContent="G08";
     }
-    else if( coreIntCheck.length === 0 && g >=3 && wlIntCheck.length === 0 && h >= 1 && f >= 6 && f <=7) 
+    else if(g >=3 && h >= 1 && f >= 6) 
     {
         document.getElementById("Grade").textContent="G09";
     }
