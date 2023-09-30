@@ -760,7 +760,7 @@ function calculateGrade(){
     var g = coreAdvCheck.length+coreExpCheck.length;
     var h = wlAdvCheck.length+wlExpCheck.length;
 
-    //G10
+    //G10//
     var i = wlIntCheck.length+wlAdvCheck.length;
     if( d >=3 && e >= 1 && f >= 6)
     {
