@@ -760,9 +760,9 @@ function calculateGrade(){
     var g = coreAdvCheck.length+coreExpCheck.length;
     var h = wlAdvCheck.length+wlExpCheck.length;
 
-    //G10
+    //G10//
     var i = wlIntCheck.length+wlAdvCheck.length;
-    if( coreIntCheck.length >=1 && d >=3 && e >= 1 && f >= 6)
+    if( d >=3 && e >= 1 && f >= 6)
     {
         document.getElementById("Grade").textContent="G08";
     }
