@@ -762,6 +762,7 @@ function calculateGrade(){
 
     //G10//
     var i = wlIntCheck.length+wlAdvCheck.length;
+<<<<<<< Updated upstream
     if( d >=3 && e >= 1 && f >= 6)
     {
         document.getElementById("Grade").textContent="G08";
@@ -785,6 +786,32 @@ function calculateGrade(){
     // {
     //     document.getElementById("errorGrade").textContent="Your Candidate grade is not from our predefined list please click on Refresh and try again later.";
     // }
+=======
+
+    if(coreExpCheck.length >=3){
+        if(wlExpCheck.length >=2 && f>=11 ||
+            h >=3 && f>=11){
+                document.getElementById("Grade").textContent="G11";   
+            }
+        else if(wlExpCheck.length >=1 && f>=8 && f<=10 ||
+            h >=2 && f>=8 && f<=10) {
+                document.getElementById("Grade").textContent="G10"   
+            }   
+    }
+
+    else if(g >=3 && h >=1 && f>=6){
+        document.getElementById("Grade").textContent="G09"  
+    }
+
+    else if(d >=3 && e >=1 && f>=6){
+        document.getElementById("Grade").textContent="G08"  
+    }
+
+    else if (document.getElementById("Grade").textContent=" ")
+    {
+        document.getElementById("errorGrade").textContent="Your Candidate grade is either G08 or G09";
+    }
+>>>>>>> Stashed changes
 }
 
 
