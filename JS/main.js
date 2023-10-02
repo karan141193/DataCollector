@@ -750,8 +750,8 @@ function calculateGrade(){
     var comIntCheck =c.querySelectorAll('input[value="Intermediate"]:checked');
     var comAdvCheck =c.querySelectorAll('input[value="Advanced"]:checked');
     var comExpCheck =c.querySelectorAll('input[value="Expert"]:checked');
-    
-    //G08
+
+    //G08//
     var d = coreIntCheck.length +coreAdvCheck.length+coreExpCheck.length;
     var e= wlIntCheck.length+wlAdvCheck.length+wlExpCheck.length;
     var f = comIntCheck.length+comAdvCheck.length+comExpCheck.length;
