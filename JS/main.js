@@ -750,6 +750,7 @@ function calculateGrade(){
     var comIntCheck =c.querySelectorAll('input[value="Intermediate"]:checked');
     var comAdvCheck =c.querySelectorAll('input[value="Advanced"]:checked');
     var comExpCheck =c.querySelectorAll('input[value="Expert"]:checked');
+
     //G08//
     var d = coreIntCheck.length +coreAdvCheck.length+coreExpCheck.length;
     var e= wlIntCheck.length+wlAdvCheck.length+wlExpCheck.length;
@@ -759,31 +760,31 @@ function calculateGrade(){
     var g = coreAdvCheck.length+coreExpCheck.length;
     var h = wlAdvCheck.length+wlExpCheck.length;
 
-    //G10
+    //G10//
     var i = wlIntCheck.length+wlAdvCheck.length;
-    if( coreIntCheck.length >=1 && d >=3 && e >= 1 && f >= 6)
+    if( d >=3 && e >= 1 && f >= 6)
     {
         document.getElementById("Grade").textContent="G08";
     }
-    else if( coreIntCheck.length === 0 && g >=3 && wlIntCheck.length === 0 && h >= 1 && f >= 6 && f <=7) 
+    else if(g >=3 && h >= 1 && f >= 6) 
     {
         document.getElementById("Grade").textContent="G09";
     }
-    else if( coreIntCheck.length === 0 && coreAdvCheck.length === 0 && wlIntCheck.length ===0 && wlAdvCheck.length ===0 && coreExpCheck.length>= 3 && wlExpCheck.length>=1 && f>=8 && f<=10||
-        coreIntCheck.length === 0 && coreAdvCheck.length === 0 && coreExpCheck.length>= 3 && i>=2 && f>=8 && f<=10)
+    else if( coreExpCheck.length >=3 && wlExpCheck.length >=1 && f>=8 ||
+        coreExpCheck.length >=3 &&  h>=2 && f>=8 )
     {
         document.getElementById("Grade").textContent="G10";
     }
-    else if(coreIntCheck.length === 0 && coreAdvCheck.length === 0 && wlIntCheck.length ===0 && wlAdvCheck.length ===0 && coreExpCheck.length>= 3 && wlExpCheck.length>=2 && f>=11 ||
-        coreIntCheck.length === 0 && coreAdvCheck.length === 0 && coreExpCheck.length>= 3 && i>=3 && f>=11
+    else if( coreExpCheck.length >=3 && wlExpCheck.length >=1 && f>=11 ||
+        coreExpCheck.length >=3 &&  h>=3 && f>=11
         )
     {
         document.getElementById("Grade").textContent="G11";
     }
-    else if (document.getElementById("Grade").textContent=" ")
-    {
-        document.getElementById("errorGrade").textContent="Your Candidate grade is not from our predefined list please click on Refresh and try again later.";
-    }
+    // else if (document.getElementById("Grade").textContent=" ")
+    // {
+    //     document.getElementById("errorGrade").textContent="Your Candidate grade is not from our predefined list please click on Refresh and try again later.";
+    // }
 }
 
 
