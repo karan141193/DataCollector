@@ -9,7 +9,7 @@
     border: 1px solid black;
     width:38%;
     float: left;
-    height: 300px;
+    height: 400px;
     overflow-y: scroll;
 }
 
@@ -21,7 +21,7 @@
     border-bottom: 1px solid black;
     width:31%;
     float: left;
-    height: 250px;
+    height: 350px;
 }
 
 #coreDiv{
@@ -34,7 +34,7 @@
     border-bottom: 1px solid black;
     width:30%;
     float: left;
-    height: 250px;
+    height: 350px;
 }
 
 #compExperise{
@@ -62,7 +62,7 @@
 }
 
 #formtop{
-    padding-top: 10px;
+    /* padding-top: 10px; */
 }
 
 #Elements{
@@ -72,7 +72,7 @@
 
 #userForm{
     border: 1px solid black;
-    padding: 25px;
+    /* padding: 25px; */
     margin-left: 10px;
     margin-right: 10px;
 }
